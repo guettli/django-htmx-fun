@@ -8,7 +8,7 @@ setuptools.setup(
     version="0.0.1",
     author="Thomas Güttler",
     author_email="info.django-htmx-fun@thomas-guettler.de",
-    description="A small Django application to advertise the fun htmx can bring you."
+    description="A small Django application to advertise the fun htmx can bring you.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/guettli/django-htmx-fun/",
