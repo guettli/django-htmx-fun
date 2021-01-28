@@ -4,7 +4,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="django-htmx-fun"
+    name="django-htmx-fun",
     version="0.0.1",
     author="Thomas Güttler",
     author_email="info.django-htmx-fun@thomas-guettler.de",
