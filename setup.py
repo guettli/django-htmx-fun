@@ -21,6 +21,7 @@ setuptools.setup(
     python_requires='>=3.6',
     install_requires = [
         'Django',
+        'pytest-django'
     ],
     scripts = [
         'mysite/manage.py',
