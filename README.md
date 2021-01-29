@@ -47,12 +47,21 @@ manage.py migrate
 ## Start Webserver
 ```
 manage.py runserver
- ...
- Starting development server at http://127.0.0.1:8000/
 ```
 
-## Things to improve
+Diary: http://127.0.0.1:8000/
 
-If a hx-reponse fails, for example there is a typo in the code and the django-debug view gets returned, then you see nothing.
-You can open devtools and there you find the error. But a more convenient way would be handy.
+## Admin
+```
+manage.py createsuperuser
 
+```
+Admin: http://127.0.0.1:8000/admin
+
+## Screenshot
+
+![diary-django-htmx](docs/diary-django-htmx.png)
+
+In devtools you can see the lazy loading of the endless scrolling
+
+... All this is possible without writing a single line of JavaScript :-)
