@@ -65,3 +65,12 @@ Admin: http://127.0.0.1:8000/admin
 In devtools you can see the lazy loading of the endless scrolling
 
 ... All this is possible without writing a single line of JavaScript :-)
+
+
+# Related
+
+* [Güttli Django Tips](https://github.com/guettli/django-tips)
+* [Güttli's opinionated Python Tips](https://github.com/guettli/python-tips)
+* [Güttli working-out-loud](https://github.com/guettli/wol)
+
+
