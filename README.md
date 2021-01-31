@@ -66,8 +66,11 @@ In devtools you can see the lazy loading of the endless scrolling
 
 ... All this is possible without writing a single line of JavaScript :-)
 
+## Pull Requests are welcome
 
-# Related
+You have an idea how to improve this example? Great! Just do it, provide a pull request and I will merge it.
+
+## Related
 
 * [Güttli Django Tips](https://github.com/guettli/django-tips)
 * [Güttli's opinionated Python Tips](https://github.com/guettli/python-tips)
