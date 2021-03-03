@@ -70,6 +70,10 @@ In devtools you can see the lazy loading of the endless scrolling
 
 You have an idea how to improve this example? Great! Just do it, provide a pull request and I will merge it.
 
+## Podcast
+
+[Podcast with the inventor of htmx](https://devmode.fm/episodes/dynamic-html-with-htmx/amp)
+
 ## Related
 
 * [Güttli Django Tips](https://github.com/guettli/django-tips)
