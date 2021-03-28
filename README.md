@@ -28,8 +28,11 @@ I want html pages with several small forms and I want to load and submit each of
 individually. This does not mean I want to write a Single-Page-Application. There
 are more colors than black and white. 
 
+[Make web development fun again (Slides)](https://docs.google.com/presentation/d/1KHtEitL4O-EjbxrWdUk8oV9ciXcB39MLOA295QGqK28/edit#slide=id.p)
 
 ## Install
+
+If you want to install my small htmx demo application:
 
 ```
 python3 -m venv django-htmx-fun-env
