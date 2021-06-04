@@ -78,11 +78,49 @@ In devtools you can see the lazy loading of the endless scrolling
 
 Here is my personal naming pattern, which helps me to read the source more easily
 
-Suffix _page(): Function based view. `foo_page(request, ...)`. Returns a HttpResponse with a full page. URL: `/foo`
+**_page():** 
 
-Suffix _hx(): Function based view. `foo_hx(reqest, ...)`. Returns a HttpResponse which only contains a HTML fragment. URL: `/foo_hx`
+Function based view. 
 
-Suffx _html(): Python method which returns a HTML SafeString. Usualy created via [format_html()](https://docs.djangoproject.com/en/dev/ref/utils/#django.utils.html.format_html).
+`foo_page(request, ...)`. 
+
+Returns a HttpResponse with a full page. 
+
+URL: `/foo`
+
+---
+
+**_hx():**
+
+Function based view.
+
+`foo_hx(reqest, ...)`
+
+This method should be called via HTTP-GET. Returns a HttpResponse which only contains a HTML fragment. 
+
+URL: `/foo_hx`
+
+---
+
+**_hxpost():**
+
+Function based view.
+
+`foo_hxpost(reqest, ...)`
+
+This methods should be called via HTTP-POST. Returns a HttpResponse which only 
+contains a HTML fragment. 
+
+URL: `/foo_hxpost`
+
+
+---
+
+**_html():**
+
+Python method which returns a HTML SafeString. 
+
+Usually created via [format_html()](https://docs.djangoproject.com/en/dev/ref/utils/#django.utils.html.format_html).
 
 ## Pull Requests are welcome
 
