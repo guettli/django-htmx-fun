@@ -44,6 +44,8 @@ cd django-htmx-fun-env
 pip install -e git+ssh://git@github.com/guettli/django-htmx-fun.git#egg=django_htmx_fun
 ```
 
+The source code is now in src/django-htmx-fun/
+
 ## Run Database Migrations
 
 ```
