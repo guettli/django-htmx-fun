@@ -1,8 +1,11 @@
 from django.http import HttpResponse
 from django.utils.html import format_html
 
+
 def page(content):
-    return HttpResponse(format_html('''<!DOCTYPE html>
+    return HttpResponse(
+        format_html(
+            '''<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -24,4 +27,7 @@ def page(content):
     crossorigin="anonymous"></script>
 
 </html>
-''', content=content))
+''',
+            content=content,
+        )
+    )

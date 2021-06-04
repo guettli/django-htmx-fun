@@ -5,9 +5,15 @@ from django.utils.html import format_html
 
 
 def start_page(request):
-    return page(format_html('''
+    return page(
+        format_html(
+            '''
      {note_add}
-     {first_note}''', note_add=note_add_html(), first_note=first_note()))
+     {first_note}''',
+            note_add=note_add_html(),
+            first_note=first_note(),
+        )
+    )
 
 
 def first_note():

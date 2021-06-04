@@ -19,11 +19,8 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     python_requires='>=3.6',
-    install_requires = [
-        'Django',
-        'pytest-django'
-    ],
-    scripts = [
+    install_requires=['Django', 'pytest-django'],
+    scripts=[
         'mysite/manage.py',
-    ]
+    ],
 )
