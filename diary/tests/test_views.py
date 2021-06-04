@@ -1,4 +1,4 @@
-from diary.views import get_next_or_none
+from diary.views.note import get_next_or_none
 from django.urls import reverse
 
 
@@ -8,7 +8,6 @@ def test_get_next_or_none__last(note):
 def test_get_next_or_none__next_exists(note2):
     assert get_next_or_none(note2).title == 'My Title'
 
-def test_NoteListView(client, note):
-    response = client.get(reverse('note-list'))
+def test_start_page(client, note):
+    response = client.get('/')
     assert response.status_code == 200
-    assert b'<div hx-get="/note/create" hx-trigger="load" hx-swap="outerHTML"></div>' in response.content

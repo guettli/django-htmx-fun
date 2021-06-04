@@ -1,9 +1,9 @@
-from diary.views import NoteListView, NoteCreateView, note_and_next
+from diary.views.note import note_and_next_hx, create_note_hxpost
+from diary.views.start import start_page
 from django.urls import path
 
 urlpatterns = [
-    path('', NoteListView.as_view(), name='note-list'),
-    path('note/create', NoteCreateView.as_view(), name='note-create'),
-    path('note/<pk>/and_next', note_and_next, name='note_and_next'),
-
+    path('', start_page, name='start_page'),
+    path('create_note_hxpost', create_note_hxpost, name='create_note_hxpost'),
+    path('note_and_next_hx/<note_id>', note_and_next_hx, name='note_and_next_hx'),
 ]

@@ -1,3 +1,4 @@
+
 # django-htmx-fun
 
 A small Django application to advertise the fun [htmx](//htmx.org) can bring you.
@@ -70,6 +71,16 @@ Admin: http://127.0.0.1:8000/admin
 In devtools you can see the lazy loading of the endless scrolling
 
 ... All this is possible without writing a single line of JavaScript :-)
+
+## Naming Pattern
+
+Here is my personal naming pattern, which helps me to read the source more easily
+
+Suffix _page(): Function based view. `foo_page(request, ...)`. Returns a HttpResponse with a full page. URL: `/foo`
+
+Suffix _hx(): Function based view. `foo_hx(reqest, ...)`. Returns a HttpResponse which only contains a HTML fragment. URL: `/foo_hx`
+
+Suffx _html(): Python method which returns a HTML SafeString. Usualy created via [format_html()](https://docs.djangoproject.com/en/dev/ref/utils/#django.utils.html.format_html).
 
 ## Pull Requests are welcome
 
