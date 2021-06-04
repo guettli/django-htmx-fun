@@ -124,7 +124,7 @@ Usually created via [format_html()](https://docs.djangoproject.com/en/dev/ref/ut
 
 ## Opinionated Best Practices
 
-I like it conditionless. I try to avoid to have to many "if" and "else".
+I like it conditionless. I try to avoid to have too many "if" and "else".
 
 I avoid to use `if request.method == 'POST'`.
 
