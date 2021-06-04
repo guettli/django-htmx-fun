@@ -28,6 +28,8 @@ I want html pages with several small forms and I want to load and submit each of
 individually. This does not mean I want to write a Single-Page-Application. There
 are more colors than black and white. 
 
+For more about htmx see the homepage: [htmx.org](//htmx.org)
+
 [HTMX: Frontend Revolution (Slides from DjangoCon EU 2021)](https://docs.google.com/presentation/d/1Gx1UGVAgD2ALLOucsIm9myF5mDflbP06-M6_d-RdZAY/edit?usp=sharing)
 
 ## Install
@@ -72,10 +74,6 @@ In devtools you can see the lazy loading of the endless scrolling
 ## Pull Requests are welcome
 
 You have an idea how to improve this example? Great! Just do it, provide a pull request and I will merge it.
-
-## Podcast
-
-[Podcast with the inventor of htmx](https://devmode.fm/episodes/dynamic-html-with-htmx/amp)
 
 ## Related
 
