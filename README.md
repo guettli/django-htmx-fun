@@ -94,7 +94,7 @@ URL: `/foo`
 
 Function based view.
 
-`foo_hx(reqest, ...)`
+`foo_hx(request, ...)`
 
 This method should be called via HTTP-GET. Returns a HttpResponse which only contains a HTML fragment. 
 
@@ -106,7 +106,7 @@ URL: `/foo_hx`
 
 Function based view.
 
-`foo_hxpost(reqest, ...)`
+`foo_hxpost(request, ...)`
 
 This methods should be called via HTTP-POST. Returns a HttpResponse which only 
 contains a HTML fragment. 
@@ -122,6 +122,17 @@ Python method which returns a HTML SafeString.
 
 Usually created via [format_html()](https://docs.djangoproject.com/en/dev/ref/utils/#django.utils.html.format_html).
 
+## Opinionated Best Practices
+
+I like it conditionless. I try to avoid to have to many "if" and "else".
+
+I avoid to use `if request.method == 'POST'`.
+
+I don't use the special http headers which get added by htmx. I avoid this (pseudo code): "if request is a htmx request, then ...".
+Instead I create two endpoints: One which returns a full page, one which returns a fragment.
+
+
+
 ## Pull Requests are welcome
 
 You have an idea how to improve this example? Great! Just do it, provide a pull request and I will merge it.
@@ -131,5 +142,5 @@ You have an idea how to improve this example? Great! Just do it, provide a pull 
 * [Güttli Django Tips](https://github.com/guettli/django-tips)
 * [Güttli's opinionated Python Tips](https://github.com/guettli/python-tips)
 * [Güttli working-out-loud](https://github.com/guettli/wol)
-
+* [Güttli's Programming Guidelines (long)](https://github.com/guettli/programming-guidelines)
 
