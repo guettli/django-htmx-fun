@@ -122,6 +122,15 @@ Python method which returns a HTML SafeString.
 
 Usually created via [format_html()](https://docs.djangoproject.com/en/dev/ref/utils/#django.utils.html.format_html).
 
+## Flat URL Namespace
+
+Above naming pattern makes it very use to get to the corresponding code. 
+
+Imagine you get a message from tool monitoring your servers. There is an exception at URL "/sunshine/123",
+then I know the name of the method which handles this URL. It is "sunshine_page".
+
+If you need several pages for a model, then you will not use "/sunshine/foo" and "/sunshine/bar", but instead "/sunshine_foo" and "/sunshine_bar".
+
 ## Opinionated Best Practices
 
 I like it conditionless. I try to avoid to have too many "if" and "else".
