@@ -127,7 +127,7 @@ Usually created via [format_html()](https://docs.djangoproject.com/en/dev/ref/ut
 Above naming pattern makes it very use to get to the corresponding code. 
 
 Imagine you get a message from tool monitoring your servers. There is an exception at URL "/sunshine/123",
-then I know the name of the method which handles this URL. It is "sunshine_page".
+then I know the name of the method which handles this URL. The method is "sunshine_page()".
 
 If you need several pages for a model, then you will not use "/sunshine/foo" and "/sunshine/bar", but instead "/sunshine_foo" and "/sunshine_bar".
 
