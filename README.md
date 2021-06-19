@@ -66,14 +66,6 @@ manage.py createsuperuser
 ```
 Admin: http://127.0.0.1:8000/admin
 
-## Screenshot
-
-![diary-django-htmx](docs/diary-django-htmx.png)
-
-In devtools you can see the lazy loading of the endless scrolling
-
-... All this is possible without writing a single line of JavaScript :-)
-
 ## Naming Pattern
 
 Here is my personal naming pattern, which helps me to read the source more easily
@@ -113,6 +105,20 @@ contains a HTML fragment.
 
 URL: `/foo_hxpost`
 
+---
+
+**_json():**
+
+Function based view.
+
+`foo_json(request, ...)`
+
+This method returns a [JSONResponse](https://docs.djangoproject.com/en/dev/ref/request-response/#jsonresponse-objects).
+
+URL: `/foo_json`
+
+TODO: I am not happy with this yet, since you can't distinguish between a method
+which returns a JSON data (dictionary), JSON string or JSONResponse.
 
 ---
 
@@ -140,6 +146,14 @@ I avoid to use `if request.method == 'POST'`.
 I don't use the special http headers which get added by htmx. I avoid this (pseudo code): "if request is a htmx request, then ...".
 Instead I create two endpoints: One which returns a full page, one which returns a fragment.
 
+
+## Screenshot
+
+![diary-django-htmx](docs/diary-django-htmx.png)
+
+In devtools you can see the lazy loading of the endless scrolling
+
+... All this is possible without writing a single line of JavaScript :-)
 
 
 ## Pull Requests are welcome
