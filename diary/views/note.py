@@ -25,7 +25,7 @@ def note_add_html():
 def note_form_html(form):
     return format_html(
         '''
-    <form hx-post="{url}">
+    <form hx-post="{url}" hx-swap="outerHTML">
      {form}
      <input type="submit">
     </form>''',
