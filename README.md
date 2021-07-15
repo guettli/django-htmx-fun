@@ -139,6 +139,10 @@ If you need several pages for a model, then you will not use "/sunshine/foo" and
 
 ## Opinionated Best Practices
 
+I switched from Django class-based-views (CBV) to function-based-views (FBV). This simplifies things. 
+One URL corresponds to one Python method. If an action requires two HTTP verbs (GET and POST), then I use **two URLs**. Posts
+always go to hx-methods, not to URLs returning full pages.
+
 I like it conditionless. I try to avoid to have too many "if" and "else".
 
 I avoid to use `if request.method == 'POST'`.
