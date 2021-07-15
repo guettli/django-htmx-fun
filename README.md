@@ -80,6 +80,8 @@ Returns a HttpResponse with a full page.
 
 URL: `/foo`
 
+This servers only http GET. Updates (http POST) go to _hxpost URLs.
+
 ---
 
 **_hx():**
