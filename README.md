@@ -107,6 +107,8 @@ contains a HTML fragment.
 
 URL: `/foo_hxpost`
 
+If you are lazy like me, then you don't use [require_POST decorator](https://docs.djangoproject.com/en/dev/topics/http/decorators/#django.views.decorators.http.require_POST), since it provides no big benefit.
+
 ---
 
 **_json():**
