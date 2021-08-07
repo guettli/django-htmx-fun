@@ -45,6 +45,10 @@ pip install -e git+ssh://git@github.com/guettli/django-htmx-fun.git#egg=django_h
 ```
 
 The source code is now in src/django-htmx-fun/
+### Note
+If you get `permission denied` error while running `pip install -e git+ssh://git@github.com/guettli/django-htmx-fun.git#egg=django_htmx_fun` you need to first set up ssh key in your machine. Follow the links provided below:
+1. [Generating a new SSH key and adding it to the ssh-agent](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+1. [Adding a new SSH key to your GitHub account](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) 
 
 ## Run Database Migrations
 
