@@ -41,7 +41,7 @@ If you want to install my small htmx demo application:
 python3 -m venv django-htmx-fun-env
 cd django-htmx-fun-env
 . bin/activate
-pip install -e git+ssh://git@github.com/guettli/django-htmx-fun.git#egg=django_htmx_fun
+pip install -e git+https://github.com/guettli/django-htmx-fun.git#egg=django-htmx-fun
 ```
 
 The source code is now in src/django-htmx-fun/
