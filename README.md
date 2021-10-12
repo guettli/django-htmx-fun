@@ -31,7 +31,7 @@ are more colors than black and white.
 
 For more about htmx see the homepage: [htmx.org](//htmx.org)
 
-[HTMX: Frontend Revolution (Slides from DjangoCon EU 2021)](https://docs.google.com/presentation/d/1Gx1UGVAgD2ALLOucsIm9myF5mDflbP06-M6_d-RdZAY/edit?usp=sharing)
+[HTMX: Frontend Revolution (Slides from DjangoCon 2021)](https://docs.google.com/presentation/d/12dgaBnUgl4cmEkiOhUJL5hsbGQ6hB5sslDuozmBjVUA/edit?usp=sharing)
 
 ## Install
 
@@ -153,6 +153,9 @@ I avoid to use `if request.method == 'POST'`.
 
 I don't use the special http headers which get added by htmx. I avoid this (pseudo code): "if request is a htmx request, then ...".
 Instead I create two endpoints: One which returns a full page, one which returns a fragment.
+
+Goodbye formsets. With I use several `<form>` tags in one page. This means I hardly use formsets. Some for the "prefix" of forms: Since
+I don't put several Django form instances into one `<form>` tag, I don't need the prefix any more.
 
 
 ## Screenshot
