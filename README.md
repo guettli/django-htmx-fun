@@ -156,7 +156,7 @@ I only use the http verbs GET and POST, although htmx can do http PUT, http PATC
 I don't use the special http headers which get added by htmx. I avoid this (pseudo code): "if request is a htmx request, then ...".
 Instead I create two endpoints: One which returns a full page, one which returns a fragment.
 
-Goodbye formsets. With I use several `<form>` tags in one page. This means I hardly use formsets. Some for the "prefix" of forms: Since
+Goodbye formsets. I use several `<form>` tags in one page. This means I hardly use formsets. Some for the "prefix" of forms: Since
 I don't put several Django form instances into one `<form>` tag, I don't need the prefix any more.
 
 
