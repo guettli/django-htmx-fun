@@ -33,6 +33,8 @@ For more about htmx see the homepage: [htmx.org](//htmx.org)
 
 [HTMX: Frontend Revolution (Slides from DjangoCon 2021)](https://docs.google.com/presentation/d/12dgaBnUgl4cmEkiOhUJL5hsbGQ6hB5sslDuozmBjVUA/edit?usp=sharing)
 
+Youtube video of the Talk [DjangoCon US 2021: HTMX, Frontend Revolution](https://www.youtube.com/watch?v=z0yPTv15Fjk)
+
 ## Install
 
 If you want to install my small htmx demo application:
