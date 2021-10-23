@@ -149,7 +149,9 @@ always go to hx-methods, not to URLs returning full pages.
 
 I like it conditionless. I try to avoid to have too many "if" and "else".
 
-I avoid to use `if request.method == 'POST'`.
+I avoid to use `if request.method == 'POST'`. This means I don't handle different http verbs in one function based view. A function based view handles either GET xor a POST. URLs are cheap I create two URLs if I need a a readonly view and a view which does something.
+
+I only use the http verbs GET and POST, although htmx can do http UPDATE, http DELETE, ...
 
 I don't use the special http headers which get added by htmx. I avoid this (pseudo code): "if request is a htmx request, then ...".
 Instead I create two endpoints: One which returns a full page, one which returns a fragment.
