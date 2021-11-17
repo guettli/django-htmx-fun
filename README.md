@@ -70,21 +70,29 @@ Admin: http://127.0.0.1:8000/admin
 
 ## No need for the POST/Redirect/GET pattern
 
-If you are used to django's form handling, then you are used to the [POST/Redirect/GET Pattern](https://en.wikipedia.org/wiki/Post/Redirect/Get).
+If you are used to django's form handling, then you are used to the [POST/Redirect/GET Pattern](https://en.wikipedia.org/wiki/Post/Redirect/Get). This means after the client submitted a valid form, the server response has the http status 302 with a new location URL.
 
-This is not needed if you submit a form via htmx and you just want to update on part of the whole page.
+This is not needed if you submit a form via htmx and you just want to update one part of the whole page.
 
 I use this pattern now:
 
-Case 1: The http POST was successful, and data was changed. The server returns the status code 201 "Created". I use this even if data was changed, and not "created". I use this and not the usual 200 to simplify testing. I never ever want to confuse the http status of a successful htmx POST with the http status of a invalid traditional django http POST. The response contains the new HTML. No need for a redirect.
+Case 1: The http POST was successful, and data was changed. The server returns the status code 201 "Created". I use this even if data was changed, and not "created". I use this and not the usual 200 to simplify testing. I never ever want to confuse the http status of a successful htmx POST with the http status of an invalid traditional django http POST. The response contains the new HTML. No need for a redirect.
 
-Case 2: The http POST was not successful, since the data in the form was not valid. Then I return 422. 
+Case 2: The http POST was not successful, since the data in the form was not valid. Then my server code returns 422. 
 
 Related question: [Which http status codes to use when processing http post?](https://stackoverflow.com/q/69773241/633961)
 
+## Full Page (aka "client-side") Redirect
 
+If you use htmx, then most http responses will contains html fragments which will inserted into the current page.
 
+But sometimes you want to do a traditional full page redirect. In the htmx docs it is called "client-side" redirect.
 
+Then you need return a http response which has the http header "HX-Redirect" set to the URL of the new location.
+
+A common mistake is the set the status code if this response to 302. But this will trigger a redirect inside htmx.
+
+Here is some code to do a full page redirect with Django: [hx-target: swap html vs full page reload](https://stackoverflow.com/a/65569741/633961)
 
 ## Naming Pattern
 
