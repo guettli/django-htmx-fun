@@ -84,11 +84,11 @@ Related question: [Which http status codes to use when processing http post?](ht
 
 ## Full Page (aka "client-side") Redirect
 
-If you use htmx, then most http responses will contains html fragments which will inserted into the current page.
+If you use htmx, then most http responses will contains html fragments which will get swapped into the current page.
 
 But sometimes you want to do a traditional full page redirect. In the htmx docs it is called "client-side" redirect.
 
-Then you need return a http response which has the http header "HX-Redirect" set to the URL of the new location.
+Then you need return a http response which has the http header "HX-Redirect" set to the URL of the new location. Docs: [Response Headers](https://htmx.org/docs/#response-headers)
 
 A common mistake is the set the status code if this response to 302. But this will trigger a redirect inside htmx.
 
