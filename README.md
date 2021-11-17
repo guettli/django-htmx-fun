@@ -68,6 +68,24 @@ manage.py createsuperuser
 ```
 Admin: http://127.0.0.1:8000/admin
 
+## No need for the POST/Redirect/GET pattern
+
+If you are used to django's form handling, then you are used to the [POST/Redirect/GET Pattern](https://en.wikipedia.org/wiki/Post/Redirect/Get).
+
+This is not needed if you submit a form via htmx and you just want to update on part of the whole page.
+
+I use this pattern now:
+
+Case 1: The http POST was successful, and data was changed. The server returns the status code 201 "Created". I use this even if data was changed, and not "created". I use this and not the usual 200 to simplify testing. I never ever want to confuse the http status of a successful htmx POST with the http status of a invalid traditional django http POST. The response contains the new HTML. No need for a redirect.
+
+Case 2: The http POST was not successful, since the data in the form was not valid. Then I return 422. 
+
+Related question: [Which http status codes to use when processing http post?](https://stackoverflow.com/q/69773241/633961)
+
+
+
+
+
 ## Naming Pattern
 
 Here is my personal naming pattern, which helps me to read the source more easily
