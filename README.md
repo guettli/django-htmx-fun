@@ -20,7 +20,7 @@ I need to validate my data on the server anyway. So why should I validate them o
 
 The Django Forms library has all you need to write database focused applications.
 
-Sending HTML fragements over the wire keeps my application simple.
+Sending HTML fragments over the wire keeps my application simple.
 
 There is just one thing which is outdated (although it is still perfectly fine). The need
 for a full page refresh after submitting a form.

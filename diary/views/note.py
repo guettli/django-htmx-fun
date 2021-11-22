@@ -1,11 +1,12 @@
-from diary.models import Note
 from django.forms import ModelForm, Textarea
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404
 from django.urls import reverse
 from django.utils.html import format_html
-
 from django.views.decorators.http import require_POST
+
+from diary.models import Note
+from diary.utils import HttpResponseUnprocessableEntity, HttpResponseCreated
 
 
 class NoteCreateForm(ModelForm):
@@ -56,8 +57,8 @@ def create_note_hxpost(request):
     form = NoteCreateForm(request.POST)
     if form.is_valid():
         note = form.save()
-        return HttpResponse(format_html('{} {}', note_add_html(), note_html(note)))
-    return HttpResponse(note_form_html(form))
+        return HttpResponseCreated(format_html('{} {}', note_add_html(), note_html(note)), note.pk)
+    return HttpResponseUnprocessableEntity(note_form_html(form), form.errors)
 
 
 def note_and_next_html(note):
@@ -79,7 +80,7 @@ def get_next_or_none(note):
     # distinguished with ".first()". Grrr ugly loop is needed.
     found = False
     for next in Note.objects.filter(datetime__lte=note.datetime).order_by(
-        '-datetime', '-id'
+            '-datetime', '-id'
     ):
         if found:
             return next
